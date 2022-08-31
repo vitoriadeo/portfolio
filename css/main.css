@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
   background: #16161a;
@@ -50,13 +50,6 @@ b {
   display: block;
 }
 
-.avatar {
-  width: 90px;
-  height: 90px;
-  border-radius: 100%;
-  border: 5px solid #0a0a0f;
-}
-
 #corpo-post {
   width: 100%;
   height: auto;
@@ -70,6 +63,7 @@ b {
   border-radius: 5px;
   line-height: 1.7em;
   box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
 .about {
@@ -98,22 +92,20 @@ b {
 }
 
 .titulo-site {
-  color: #d8dadb;
-  font-family: "VT323", monospace;
+  color: #bebebe;
+  font-family: 'Bebas Neue', cursive;
   font-weight: 400;
-  font-size: 2.1em;
+  font-size: 2.7em;
   text-align: left;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 0 10px #cacaca;
-  margin-left: 10px;
   margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .titulo-post {
   color: #d8dadb;
   font-family: "Hind", sans-serif;
   font-weight: 400;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   display: inline-block;
   margin: 10px 0 0 0;
   font-size: 1.6em;
@@ -208,6 +200,13 @@ div {
 .shh {
   color: #e53170;
   font-size: 12px;
+}
+
+.proj-link{
+  background: #7F5AF0;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 @media screen and (max-width: 480px) {
