@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfólio para pôr as coisinhas que aprendo. 
+Portfólio para colocar as coisinhas que aprendo/fiz. 
 
 Melhorias estão sendo adicionadas aos poucos.
 
