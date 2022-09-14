@@ -102,6 +102,18 @@ b {
   margin-left: 10px;
 }
 
+.sociais {
+  float: right; 
+  clear: both; 
+  padding: 25px 0;
+}
+
+.redes {
+  width: 25px;
+  margin: 0 7px;
+  filter: grayscale(1) invert(1);
+}
+
 .titulo-post {
   color: #d8dadb;
   font-family: "Hind", sans-serif;
@@ -226,7 +238,6 @@ div {
 
   .titulo-site {
     margin: 25px 0 25px 0;
-    text-shadow: 0 0 6px #929292;
   }
 
   #cabeca {
