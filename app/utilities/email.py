@@ -1,13 +1,11 @@
 from flask import current_app
 import os
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
-
+import resend
 
 def envia_Email(name, subject, sender, msg):
     remetente = os.environ.get('MAIL_DEFAULT_SENDER')
     destinatario = os.environ.get('MAIL_RECIPIENT')
-    api_key = os.environ.get('SENDGRID_API_KEY')
+    api_key = os.environ.get('RESEND_API_KEY')
 
     html_content = f"""
         <h3>Nova mensagem de contato recebida</h3>
@@ -17,18 +15,16 @@ def envia_Email(name, subject, sender, msg):
         <p>{msg.replace('\n', '<br>')}</p>
     """
 
-    message = Mail(
-        from_email = remetente,
-        to_emails=destinatario,
-        subject=subject,
-        html_content=html_content
-    )
-
     try:
-        sg = SendGridAPIClient(api_key)
-        response = sg.send(message)
+        params = {
+            "from": remetente,
+            "to": destinatario,
+            "subject": subject,
+            "html": html_content,
+            "reply_to": remetente,
+        }
 
-        print(f'Email enviado para {destinatario}, status code: {response.status_code}')
+        resend.Emails.send(params)
 
         return True, 'Mensagem enviada com sucesso!'
     except Exception as e:
